@@ -1,0 +1,97 @@
+body{
+    font-family: 'Amatic SC';
+    padding:20px;
+}
+h1{
+    font-weight:bold;
+    text-align:center;
+    background:#b0aac2;
+}
+.nav-item{
+    font-size: 30px;
+    font-weight:bold;
+    font-family: 'Amatic SC';
+    color:black;
+}
+.nav-link{
+    color:black;
+}
+.nav-link:hover{
+    color:pink;
+}
+.newArrival{
+    color:black;
+    background-color:#f2efe8;
+    padding:30px 40px 300px 40px;
+    float:left;
+}
+.newArrival h2{
+    font-weight:bold;
+    font-size:55px;
+}
+.newArrival a:hover{
+    color:#b0aac2;
+    font-size:40px;
+}
+.kid{
+    background-color:#f2efe8;
+    padding:30px 60px 300px 60px;
+    float:left;
+}
+.kid h2{
+    font-weight:bold;
+    font-size:55px;
+}
+.kid a:hover{
+    color:#b0aac2;
+    font-size:40px;
+}
+.men{
+    background-color:#f2efe8;
+    padding:30px 60px 300px 60px;
+    float:left;
+}
+.men h2{
+    font-weight:bold;
+    font-size:55px;
+}
+.men a:hover{
+    color:#b0aac2;
+    font-size:40px;
+}
+.onsale{
+    background-color:#f2efe8;
+    padding:30px 60px 300px 60px;
+    float:left;
+}
+.onsale h2{
+    font-weight:bold;
+    font-size:55px;
+}
+.onsale  a:hover{
+    color:#b0aac2;
+    font-size:40px;
+}
+.women{
+    background-color:#f2efe8;
+    padding:30px 60px 300px 60px;
+    float:left;
+}
+.women h2{
+    font-weight:bold;
+    font-size:55px;
+}
+.women  a:hover{
+    color:#b0aac2;
+    font-size:40px;
+}
+.card{
+    padding:10px 10px;
+
+}
+.card h5, h6{
+    font-weight:bold;
+    font-size:30px;
+    color:#5e0231;
+
+}

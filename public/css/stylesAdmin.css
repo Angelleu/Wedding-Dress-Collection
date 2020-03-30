@@ -1,0 +1,10 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:20px;
+}
+h1{
+    font-weight:bold;
+    text-align:center;
+    background:#bccbde;    
+    color:white;
+}

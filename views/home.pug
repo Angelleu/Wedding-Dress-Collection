@@ -1,0 +1,92 @@
+extends ./template.pug
+
+block content
+    link(href='https://fonts.googleapis.com/css?family=Cookie|Kaushan+Script&display=swap' rel='stylesheet')
+    .row
+        .col-8
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='3')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='4')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='5')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='6')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='../img/home/McArthur.jpeg', alt='McArthur Outlet', width='300',height='500' )
+                    .carousel-item
+                        img.d-block.w-100(src='../img/home/metrotown.jpg', alt='Metrotown Mall', width='300',height='500')
+                    .carousel-item
+                        img.d-block.w-100(src='../img/home/Pacificcenter.jpg', alt='Pacific Center',width='300',height='500')
+                    .carousel-item
+                        img.d-block.w-100(src='../img/home/parkroyal.jpg', alt='Park Royal',width='300',height='500')
+                    .carousel-item
+                        img.d-block.w-100(src='../img/home/richmondcenter.jpeg', alt='Richmond Center',width='300',height='500')
+                    .carousel-item
+                        img.d-block.w-100(src='../img/home/robson.jpg', alt='Robson St.',width='300',height='500')
+                a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+        style(type='text/css').
+            /*.post{
+                padding:20px 20px 20px 20px;
+
+            }*/	
+            .post p {
+                text-align:center;
+                font-size:25px;
+                font-family: 'Kaushan Script', cursive;
+                color:black;
+                    }
+            .important{
+                color:red;
+                font-size:35px;
+                font-family: 'Kaushan Script', cursive;
+                text-align:center
+            }
+            .third{
+                font-family: 'Kaushan Script', cursive;
+                text-align:center;
+                font-size:40px;
+            }
+        .col-4
+            div
+                .post
+                    p.
+                        Hi there,</br>
+                        This is the website for Taiwanese to shop with Angel in Vancouver!
+                    p.
+                        Shopping process</br>
+                        Select the products in your shopping cart.</br>
+                        Complete the transaction in 3 business days.</br>        
+    .important    
+        p.
+            NOTICE! </br>
+            /</br>
+            The purchase only happens when the transaction is completed. </br>
+        
+        p.
+            Attention!</br>
+            No order cancelled after purchased
+    .third
+        p.
+            /</br>
+            Enjoy Your Shopping
+
