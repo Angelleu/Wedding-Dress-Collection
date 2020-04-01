@@ -8,6 +8,6 @@ mongoose.connect(uri, {useNewUrlParser: true,useUnifiedTopology: true});
 const adminDelete=async(req,res)=>{
     const idToDelete=req.params.id;
     await Product.deleteOne({_id: idToDelete}).exec();
-        res.render('../routes/admin')
+        res.redirect('/admin')
 }
 module.exports=adminDelete;

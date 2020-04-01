@@ -3,7 +3,7 @@ extends ./templateAdmin.pug
 block content
     .create
         h2 This is a form that you can create a new products
-        form(action="/admin/create" method="post" entype="multipart/form-data")
+        form(action="/admin/create" method="post" entype="multipart/form-data") 
                 .form-group
                     label(for='productName') Product Name:
                     input#exampleInputEmail1.form-control(type='text' placeholder="Product Name" name="name")
@@ -15,7 +15,7 @@ block content
                     input#exampleInputPrice.form-control(type='text' placeholder="Price" name="price") 
                 .form-group
                     label(for='file') Image:
-                    input#exampleFormControlFile1.form-control-file(type='file' name="image" accept="image/*")
+                    input#exampleFormControlFile1.form-control-file(type='file' name="image")
                 button.btn.btn-outline-info(type='button') Create
         style(type='text/css').
                 body{
