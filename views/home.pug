@@ -1,7 +1,7 @@
 extends ./template.pug
 
 block content
-    link(href='https://fonts.googleapis.com/css?family=Cookie|Kaushan+Script&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Bad+Script|Baloo+Bhai+2|Rochester&display=swap' rel='stylesheet')
     .row
         .col-8
             #carouselExampleIndicators.carousel.slide(data-ride='carousel')
@@ -45,48 +45,102 @@ block content
                     span.carousel-control-next-icon(aria-hidden='true')
                     span.sr-only Next
         style(type='text/css').
-            /*.post{
-                padding:20px 20px 20px 20px;
+            .post{
+                background:#c2d4d8;
+                height:500px;
 
-            }*/	
-            .post p {
-                text-align:center;
-                font-size:25px;
-                font-family: 'Kaushan Script', cursive;
+            }
+            .post p:first-child{
+                text-align:left;
+                font-size:20px;
+                font-family: 'Baloo Bhai 2', cursive;
                 color:black;
                     }
-            .important{
+            .post p:last-child {
+                text-align:left;
+                font-size:40px;
+                font-family: 'Baloo Bhai 2', cursive;
+                color:black;
+                    }
+            .important p:first-child{
+                color:black;
+                font-size:40px;
+                font-family: 'Baloo Bhai 2', cursive;
+                text-align:center;
+            }
+            .important p{
                 color:red;
-                font-size:35px;
-                font-family: 'Kaushan Script', cursive;
+                font-size:25px;
+                font-family: 'Baloo Bhai 2', cursive;
                 text-align:center
             }
-            .third{
-                font-family: 'Kaushan Script', cursive;
+            footer{
+                background:#b0aac2;
+                font-family: 'Baloo Bhai 2', cursive;
+                font-size:35px;
+                padding:30px;
                 text-align:center;
-                font-size:40px;
+            }
+            .card img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
             }
         .col-4
             div
                 .post
                     p.
-                        Hi there,</br>
-                        This is the website for Taiwanese to shop with Angel in Vancouver!
+                        Anything But Ordinary</br>
                     p.
-                        Shopping process</br>
-                        Select the products in your shopping cart.</br>
-                        Complete the transaction in 3 business days.</br>        
-    .important    
+                        Favorite brands and hottest trends.</br>
+                    p.
+                        Why pay more?
+              
+    .important
         p.
-            NOTICE! </br>
-            /</br>
+            Shopping process</br>
+            Select the products in your shopping cart.</br>
+            Complete the transaction in 3 business days.</br>      
+        p.
+            NOTICE:</br>
             The purchase only happens when the transaction is completed. </br>
         
         p.
-            Attention!</br>
+            Attention:</br>
             No order cancelled after purchased
-    .third
-        p.
-            /</br>
-            Enjoy Your Shopping
+    .row
+    .card-group
+        .col-sm-4
+            .card
+                img.card-img-top(src='../img/home/Coach-Logo.jpg' alt='...')
+                .card-body
+                h5.card-title Coach
+        .col-sm-4    
+            .card
+                img.card-img-top(src='../img/home/LV-logo.jpg' alt='...')
+                .card-body
+                h5.card-title Louis Vuitton
+        .col-sm-4    
+            .card
+                img.card-img-top(src='../img/home/ordinary-logo.png' alt='...')
+                .card-body
+                h5.card-title The Ordinary
+        .col-sm-4
+            .card
+                img.card-img-top(src='../img/home/Coach-Logo.jpg' alt='...')
+                .card-body
+                h5.card-title Coach
+        .col-sm-4    
+            .card
+                img.card-img-top(src='../img/home/LV-logo.jpg' alt='...')
+                .card-body
+                h5.card-title Louis Vuitton
+        .col-sm-4    
+            .card
+                img.card-img-top(src='../img/home/ordinary-logo.png' alt='...')
+                .card-body
+                h5.card-title The Ordinary
+    footer
+            p.
+                Enjoy Your Shopping
 

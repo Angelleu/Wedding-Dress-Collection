@@ -2,18 +2,17 @@ extends ./templateAdmin.pug
 
 block content
     h1 This is a form that you can create a new products
-    form
-        .form-group
-            label(for='productName') Product Name:
-            input#exampleInputEmail1.form-control(type='text')
-           // small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
-        .form-group
-            label(for='description') Description:
-            input#exampleInputPassword1.form-control(type='text')
-        .form-group
-            label(for='price') Price:
-            input#exampleInputPassword1.form-control(type='number')
-        .form-group
-            label(for='image') Image:
-            input#exampleFormControlFile1.form-control-file(type='file')
-        button.btn.btn-primary(type='submit') Submit
+        form(action="/admin/create" method="post")
+            .form-group
+                label(for='productName') Product Name:
+                input#exampleInputEmail1.form-control(type='text' placeholder="Product Name" name="name")
+            .form-group
+                label(for='description') Description:
+                input#exampleInputDescription.form-control(type='text' placeholder="Description" name="description")
+            .form-group
+                label(for='price') Price:
+                input#exampleInputPrice.form-control(type='text' placeholder="Price" name="price")
+            .form-group
+                label(for='file') Image:
+                input#exampleFormControlFile1.form-control-file(type='file' name="image" accept="image/*")
+            button.btn.btn-outline-primary(type='submit') Create
