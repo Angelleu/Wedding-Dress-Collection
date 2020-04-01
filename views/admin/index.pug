@@ -15,4 +15,4 @@ block content
                         p.card-text=product.description
                         p.card-text Price: $ #{ product.price}
                         a.btn.btn-outline-success(href='/admin/update') Update
-                        a.btn.btn-outline-danger(href='/admin/delete') Delete
+                        a.btn.btn-outline-danger(href='/admin/delete/'+product.id) Delete

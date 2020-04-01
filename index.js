@@ -1,13 +1,28 @@
 const express =require('express')
 const app =express();
+const multer=require('multer');
 var bodyParser =require('body-parser')
 const port =process.env.port || 3000;
 
+//set storage engine
+const storage=multer.diskStorage({
+    destination:function(req,file,cb){
+        cb(null,'public/img/upload')
+    },
+    filename:function(req,file,cb){
+        cb(null,file.filename+'-'+Date.now()+'-'+file.originalname)
+    }
+})
+const upload =multer({
+    storage:storage
+})
+
 //middlewares
 app.set('view engine','pug')
-app.use(express.static(__dirname+'/public'))
+//app.use(express.static(__dirname+'/public'))
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extened:true}))
+app.use(bodyParser.urlencoded({extened:false}))
+app.use('/',express.static('public'))
 
 //module
 const home=require('./routes/home')
@@ -33,10 +48,9 @@ app.get('/onSale',onSale)
 app.get('/admin',adminIndex)
 app.get('/admin/create',adminCreate)
 app.post('/admin/create',adminCreatePost)
-app.get('/admin/delete',adminDelete)
+app.get('/admin/delete/:id',adminDelete)
 app.get('/admin/update',adminUpdate)
-
-
+app.post('/upload',upload.single('file'));
 
 
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));

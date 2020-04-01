@@ -6,13 +6,12 @@ mongoose.connect(uri, {useNewUrlParser: true,useUnifiedTopology: true});
 
 
 const adminCreate=async (req,res)=>{
-   //this.apply.post('',upload.single('file'),(req,res)=>{
        
     const newProduct={
         name:req.body.name,
         description:req.body.description,
         price:req.body.price,
-        image:req.body.image
+        image:req.file.filename
     } 
     
     const product =await new Product(newProduct).save()
