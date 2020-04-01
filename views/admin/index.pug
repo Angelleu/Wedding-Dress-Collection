@@ -1,22 +1,18 @@
 extends ./templateAdmin.pug
 
 block content
-    h2 Admin page 
-    a.btn.btn-outline-dark(href='/admin/create') Create
+    .admin
+        h2 Admin page 
+        a.btn.btn-outline-dark(href='/admin/create') Create
     .row
-        .card-group
-            each product in products
-                .col-sm-4
-                    .card(style='width: 20rem;height:35rem;')
-                        .card-body
-                            img(src=product.image alt=product.name, width='250')
-                            h5.card-title=product.name 
-                            h6.card-subtitle.mb-2.text-muted Card subtitle
-                            p.card-text=product.description
-                            p.card-text Price: $ #{ product.price}
-                            a.btn.btn-outline-success(href='/admin/update') Update
-                            a.btn.btn-outline-danger(href='/admin/delete') Delete
-
-
-
-            
+        each product in products
+            .col-sm-3
+                .card(style='width: 20rem;height:35rem;')
+                    .card-body
+                        img(src=product.image alt=product.name, width='250')
+                        h5.card-title=product.name 
+                        h6.card-subtitle.mb-2.text-muted Card subtitle
+                        p.card-text=product.description
+                        p.card-text Price: $ #{ product.price}
+                        a.btn.btn-outline-success(href='/admin/update') Update
+                        a.btn.btn-outline-danger(href='/admin/delete') Delete
