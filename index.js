@@ -1,19 +1,19 @@
 const express =require('express')
 const app =express();
-//const multer=require('multer');
+const multer=require('multer');
 var bodyParser =require('body-parser')
 const port =process.env.port || 3000;
 
-/*var storage = multer.diskStorage({
+var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../../public/img/upload')
+        cb(null, 'public/img/upload')
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
     }
-})*/
+})
 
-//const upload=multer({storage})
+const upload=multer({storage})
 
 //middlewares
 app.set('view engine','pug')
@@ -44,10 +44,10 @@ app.get('/kid',kid)
 app.get('/onSale',onSale)
 app.get('/admin',adminIndex)
 app.get('/admin/create',adminCreate)
-app.post('/admin/create',adminCreatePost);
+// app.post('/admin/create',adminCreatePost);
 app.get('/admin/delete/:id',adminDelete)
 app.get('/admin/update',adminUpdate)
-//app.post('/admin/create', upload.single('file'), adminCreatePost);
+app.post('/admin/create', upload.single('image'), adminCreatePost);
 
 
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));
