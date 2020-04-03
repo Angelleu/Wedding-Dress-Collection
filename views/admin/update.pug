@@ -1,4 +1,18 @@
 extends ./templateAdmin.pug
 
 block content
-    h1 this is from admin update
+        h2 This is a form that you can create a new products
+        form(action="/admin/update/" +product.id method="post" enctype="multipart/form-data")
+            .form-group
+                label(for='productName') Product Name:
+                input#exampleInputName.form-control(type='text' placeholder="Product Name" name="name" value=product.name)
+            .form-group
+                label(for='description') Description:
+                input#exampleInputDescription.form-control(type='text' placeholder="Description" name="description" value=product.description)
+            .form-group
+                label(for='price') Price:
+                input#exampleInputPrice.form-control(type='text' placeholder="Price" name="price" value=product.price) 
+            .form-group
+                label(for='file') Image:
+                input#exampleFormControlFile1.form-control-file(type='file' name="image")
+            button.btn.btn-outline-info Update

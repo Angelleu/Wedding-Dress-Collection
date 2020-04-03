@@ -33,6 +33,7 @@ const adminCreate=require('./routes/admin/create')
 const adminCreatePost=require('./routes/admin/createPost')
 const adminDelete=require('./routes/admin/delete')
 const adminUpdate=require('./routes/admin/update')
+const adminUpdatePost = require('./routes/admin/updatePost')
 
 
 //app.get('/',(req,res)=>res.send(`Welcome to final project`))
@@ -44,10 +45,10 @@ app.get('/kid',kid)
 app.get('/onSale',onSale)
 app.get('/admin',adminIndex)
 app.get('/admin/create',adminCreate)
-// app.post('/admin/create',adminCreatePost);
 app.get('/admin/delete/:id',adminDelete)
-app.get('/admin/update',adminUpdate)
 app.post('/admin/create', upload.single('image'), adminCreatePost);
+app.get('/admin/update/id', adminUpdate)
+app.post('/admin/update',upload.single('image'), adminUpdatePost)
 
 
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));

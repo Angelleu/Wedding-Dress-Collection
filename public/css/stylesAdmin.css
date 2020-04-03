@@ -1,6 +1,6 @@
 body{
     font-family: 'Baloo Bhai 2', cursive;
-    padding:20px;
+    margin:50px 50px 50px 50px;
 }
 .admin h2{
     font-weight:bold;
@@ -8,7 +8,8 @@ body{
     font-size:30px;    
     color:black;
     background:yellow;
-    padding:50px 50px 50px 50px;
+    margin-left:50px;
+    margin-right:50px;
 }
 .create h2{
     font-weight:bold;

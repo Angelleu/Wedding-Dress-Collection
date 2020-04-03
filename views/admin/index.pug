@@ -14,5 +14,5 @@ block content
                         h6.card-subtitle.mb-2.text-muted Card subtitle
                         p.card-text=product.description
                         p.card-text Price: $ #{ product.price}
-                        a.btn.btn-outline-success(href='/admin/update') Update
+                        a.btn.btn-outline-success(href='/admin/update/'+product.id) Update
                         a.btn.btn-outline-danger(href='/admin/delete/'+product.id) Delete
