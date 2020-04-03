@@ -4,7 +4,10 @@ const multer=require('multer');
 var bodyParser =require('body-parser')
 const port =process.env.port || 3000;
 
+<<<<<<< HEAD
 //multer storage
+=======
+>>>>>>> cf2445d0ebcec267c32cd9a45c41997c8b415e0b
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/img/upload')
@@ -15,11 +18,14 @@ var storage = multer.diskStorage({
 })
 
 const upload=multer({storage})
+<<<<<<< HEAD
 
 //Mongoose implemtation
 const mongoose = require('mongoose');
 let uri = "mongodb://shoppingwebsite:shoppingwebsite1234@cluster0-shard-00-00-s7dg5.mongodb.net:27017,cluster0-shard-00-01-s7dg5.mongodb.net:27017,cluster0-shard-00-02-s7dg5.mongodb.net:27017/shoppingwebsite?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 mongoose.connect(uri, {useNewUrlParser: true,useUnifiedTopology: true});
+=======
+>>>>>>> cf2445d0ebcec267c32cd9a45c41997c8b415e0b
 
 //middlewares
 app.set('view engine','pug')
@@ -50,11 +56,18 @@ app.get('/contact',contact)
 app.get('/onSale',onSale)
 app.get('/admin',adminIndex)
 app.get('/admin/create',adminCreate)
+<<<<<<< HEAD
 app.get('/admin/delete/:id',adminDelete)
 app.get('/admin/update/:id',adminUpdate)
 app.post('/admin/update/:id',upload.single('image'),adminUpdatePost)
 app.post('/admin/create', upload.single('image'), adminCreatePost);
 app.get('/admin/lottory',adminLottory)
+=======
+// app.post('/admin/create',adminCreatePost);
+app.get('/admin/delete/:id',adminDelete)
+app.get('/admin/update',adminUpdate)
+app.post('/admin/create', upload.single('image'), adminCreatePost);
+>>>>>>> cf2445d0ebcec267c32cd9a45c41997c8b415e0b
 
 
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));

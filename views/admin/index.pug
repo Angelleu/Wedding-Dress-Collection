@@ -1,6 +1,7 @@
 extends ./templateAdmin.pug
 
 block content
+<<<<<<< HEAD
     html
         body
         .admin
@@ -20,3 +21,20 @@ block content
                             a.btn.btn-outline-danger(href='/admin/delete/'+product.id) Delete
                 style(type='text/css').
                     
+=======
+    .admin
+        h2 Admin page 
+        a.btn.btn-outline-dark(href='/admin/create') Create
+    .row
+        each product in products
+            .col-sm-3
+                .card(style='width: 20rem;height:35rem;')
+                    .card-body
+                        img(src="/img/upload/" + product.image alt=product.name, width='250')
+                        h5.card-title=product.name 
+                        h6.card-subtitle.mb-2.text-muted Card subtitle
+                        p.card-text=product.description
+                        p.card-text Price: $ #{ product.price}
+                        a.btn.btn-outline-success(href='/admin/update') Update
+                        a.btn.btn-outline-danger(href='/admin/delete/'+product.id) Delete
+>>>>>>> cf2445d0ebcec267c32cd9a45c41997c8b415e0b
