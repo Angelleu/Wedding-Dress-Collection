@@ -7,8 +7,9 @@ body{
     text-align:center;
     font-size:30px;    
     color:black;
-    background:yellow;
-    padding:50px 50px 50px 50px;
+    background:#E86FAD;
+    margin:auto;
+ 
 }
 .create h2{
     font-weight:bold;

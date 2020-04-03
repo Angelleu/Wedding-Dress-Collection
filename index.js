@@ -1,19 +1,25 @@
 const express =require('express')
 const app =express();
-//const multer=require('multer');
+const multer=require('multer');
 var bodyParser =require('body-parser')
 const port =process.env.port || 3000;
 
-/*var storage = multer.diskStorage({
+//multer storage
+var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../../public/img/upload')
+        cb(null, 'public/img/upload')
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + '-' + file.originalname)
     }
-})*/
+})
 
-//const upload=multer({storage})
+const upload=multer({storage})
+
+//Mongoose implemtation
+const mongoose = require('mongoose');
+let uri = "mongodb://shoppingwebsite:shoppingwebsite1234@cluster0-shard-00-00-s7dg5.mongodb.net:27017,cluster0-shard-00-01-s7dg5.mongodb.net:27017,cluster0-shard-00-02-s7dg5.mongodb.net:27017/shoppingwebsite?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+mongoose.connect(uri, {useNewUrlParser: true,useUnifiedTopology: true});
 
 //middlewares
 app.set('view engine','pug')
@@ -25,29 +31,30 @@ app.use(bodyParser.urlencoded({extened:false}))
 const home=require('./routes/home')
 const newArrival=require('./routes/newArrival')
 const women=require('./routes/women')
-const men=require('./routes/men')
-const kid=require('./routes/kid')
+const contact=require('./routes/contact')
 const onSale=require('./routes/onSale')
 const adminIndex=require('./routes/admin')
 const adminCreate=require('./routes/admin/create')
 const adminCreatePost=require('./routes/admin/createPost')
 const adminDelete=require('./routes/admin/delete')
 const adminUpdate=require('./routes/admin/update')
+const adminUpdatePost=require('./routes/admin/updatePost')
+const adminLottory=require('./routes/admin/lottory')
 
 
 //app.get('/',(req,res)=>res.send(`Welcome to final project`))
 app.get('/',home)
 app.get('/newArrival',newArrival)
 app.get('/women',women)
-app.get('/men',men)
-app.get('/kid',kid)
+app.get('/contact',contact)
 app.get('/onSale',onSale)
 app.get('/admin',adminIndex)
 app.get('/admin/create',adminCreate)
-app.post('/admin/create',adminCreatePost);
 app.get('/admin/delete/:id',adminDelete)
-app.get('/admin/update',adminUpdate)
-//app.post('/admin/create', upload.single('file'), adminCreatePost);
+app.get('/admin/update/:id',adminUpdate)
+app.post('/admin/update/:id',upload.single('image'),adminUpdatePost)
+app.post('/admin/create', upload.single('image'), adminCreatePost);
+app.get('/admin/lottory',adminLottory)
 
 
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));

@@ -1,9 +1,12 @@
 body{
     font-family: 'Baloo Bhai 2', cursive;
     padding:30px;
+    margin-left:10px;
+    margin-right:10px;
 }
-h1{
+header{
     text-align:center;
+    background:;
 }
 .nav-item{
     font-size: 30px;
