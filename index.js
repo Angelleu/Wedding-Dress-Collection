@@ -47,8 +47,8 @@ app.get('/admin',adminIndex)
 app.get('/admin/create',adminCreate)
 app.get('/admin/delete/:id',adminDelete)
 app.post('/admin/create', upload.single('image'), adminCreatePost);
-app.get('/admin/update/id', adminUpdate)
-app.post('/admin/update',upload.single('image'), adminUpdatePost)
+app.get('/admin/update/:id', adminUpdate)
+app.post('/admin/update/:id',upload.single('image'), adminUpdatePost)
 
 
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));
