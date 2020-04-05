@@ -46,7 +46,7 @@ block content
                     span.sr-only Next
         style(type='text/css').
             body{
-                margin:20 0 20 0;
+                margin:0;
             }
             #carouselExampleIndicators.carousel.slide{
                 margin-top:50
@@ -86,7 +86,7 @@ block content
                 margin-left:40;
             }
             .alert.alert-danger{
-                width:1550;
+                width:1000;
                 text-align:center;
             }
             .method{
@@ -98,27 +98,26 @@ block content
             .store{
                 text-align:left;
             }
-            .space_1{
-                background:#dbc3d0;
-                margin-top:50;
-                margin-left:20
             }
             .card-body img{
-                height:350
+                display:block;
+                max-width:18rem;
+                max-height:23rem;
+                width:auto;
+                height:auto;
             }
             .card{
                 margin-top:40;
             }
         .col-4
             .covid-19
-                img.img-fluid(src='../img/home/w-16.jpg' width='500' height='700')
+                img.img-fluid(src='../img/home/w-16.jpg' width='500' height='500')
 
         .space
             .alert.alert-danger(role='alert')
                 | COVID-19:STAY SAFE AND KEEP SOCIAL DISTANCE&mdash;
     .row
-        .col-1
-            .space_1       
+        .col-1       
         .col-11   
             .main
                 img.img-fluid(src='../img/home/w-6.jpg' width='400' height='700')
@@ -134,7 +133,7 @@ block content
             .col-auto-mb-3
                 .card(style='width: 20rem;height:30rem;')
                     .card-body
-                        img.img-fluid(src="/img/upload/" + product.image alt=product.name, width='250')
+                        img(src="/img/upload/" + product.image alt=product.name, width='250')
                         a(href='/newArrival')
                             h5.card-title=product.name 
     footer
