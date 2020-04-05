@@ -6,7 +6,7 @@ block content
             .col-auto-mb-3
                 .card(style='width: 20rem;height:35rem;')
                     .card-body
-                        img(src="/img/upload/" + product.image alt=product.name, width='250')
+                        img.img-fluid(src="/img/upload/" + product.image alt=product.name, width='250')
                         h5.card-title=product.name 
                         p.card-text=product.description
                         p.card-text Price: $ #{ product.price}

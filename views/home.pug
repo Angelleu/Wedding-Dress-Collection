@@ -46,7 +46,7 @@ block content
                     span.sr-only Next
         style(type='text/css').
             body{
-                margin:20 20 20 20;
+                margin:20 0 20 0;
             }
             #carouselExampleIndicators.carousel.slide{
                 margin-top:50
@@ -111,7 +111,7 @@ block content
             }
         .col-4
             .covid-19
-                img(src='../img/home/w-16.jpg' width='500' height='700')
+                img.img-fluid(src='../img/home/w-16.jpg' width='500' height='700')
 
         .space
             .alert.alert-danger(role='alert')
@@ -121,9 +121,9 @@ block content
             .space_1       
         .col-11   
             .main
-                img(src='../img/home/w-6.jpg' width='450' height='700')
-                img(src='../img/home/w-11.jpg' width='450' height='700')
-                img(src='../img/home/w-12.jpg' width='450' height='700')
+                img.img-fluid(src='../img/home/w-6.jpg' width='400' height='700')
+                img.img-fluid(src='../img/home/w-11.jpg' width='400' height='700')
+                img.img-fluid(src='../img/home/w-12.jpg' width='400' height='700')
     .notice
         p.
             We make every girls dream come true
@@ -134,7 +134,7 @@ block content
             .col-auto-mb-3
                 .card(style='width: 20rem;height:30rem;')
                     .card-body
-                        img(src="/img/upload/" + product.image alt=product.name, width='250')
+                        img.img-fluid(src="/img/upload/" + product.image alt=product.name, width='250')
                         a(href='/newArrival')
                             h5.card-title=product.name 
     footer
@@ -153,15 +153,15 @@ block content
                     p.
                         Contact(24/7):604-666-9999</br>
                     p
-                        img(src='../img/home/line.png' alt='Smiley face' align='middle')
+                        img.img-fluid(src='../img/home/line.png' alt='Smiley face' align='middle')
                         |  angelleu
                     p
                     a(href='mailto:ANGEL840816@gmail.com') 
-                        img(src='../img/home/email.jpg' alt='Smiley face' align='middle')
+                        img.img-fluid(src='../img/home/email.jpg' alt='Smiley face' align='middle')
                         | ANGEL840816@gmail.com
                     p
                     a(href='https://www.instagram.com/')
-                        img(src='../img/home/ig.png' alt='Smiley face' align='middle')
+                        img.img-fluid(src='../img/home/ig.png' alt='Smiley face' align='middle')
                         | angel_leu
             .col-3
                 .store
