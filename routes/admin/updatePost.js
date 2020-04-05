@@ -12,10 +12,11 @@ const adminUpdate = async (req, res) => {
     }
     if (req.file){
         console.log("Updating Products");
-        updateProduct.name = req.body.name
+        updateProduct.image = req.file.filename
+        /*updateProduct.name = req.body.name
         updateProduct.description = req.body.description
         updateProduct.price = req.body.price
-        updateProduct.filename = req.body.filename
+        updateProduct.filename = req.body.filename*/
     }
     let filter = { _id: idToUpdate };
 

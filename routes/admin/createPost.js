@@ -14,6 +14,7 @@ const adminCreate=async (req,res)=>{
     
     const product =await new Product(newProduct).save()
     console.log("New Product:", product)
+    
     res.redirect('/admin')
 }
 module.exports=adminCreate;

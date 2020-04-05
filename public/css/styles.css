@@ -1,13 +1,13 @@
 body{
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Dancing Script', cursive;
     padding:30px;
+    position:sticky;
 }
 h1{
     text-align:center;
 }
 .nav-item{
-    font-size: 30px;
-    font-weight:bold;
+    font-size: 25px;
     font-family: 'Baloo Bhai 2', cursive;
     color:black;
 }
@@ -15,15 +15,25 @@ h1{
     color:black;
 }
 .nav-link:hover{
-    color:pink;
+    color:brown;
 }
-.card{
-    padding:10px 10px;
 
-}
 .card h5, h6{
     font-weight:bold;
     font-size:30px;
     color:#5e0231;
-
+}
+.sticky {
+    top: 0;
+    padding: 5px;
+    background-color:#ede9ce;
+    
+  }
+  footer{
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size:20px;
+    margin-top:100;
+    padding:5px;
+    text-align:center;
+    background:#ede9ce;
 }

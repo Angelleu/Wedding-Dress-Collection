@@ -1,7 +1,7 @@
 extends ./template.pug
 
 block content
-    link(href='https://fonts.googleapis.com/css?family=Bad+Script|Baloo+Bhai+2|Rochester&display=swap' rel='stylesheet')
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Baloo+Bhai+2&family=Dancing+Script:wght@700&family=Rochester&display=swap" rel="stylesheet">
     .row
         .col-8
             #carouselExampleIndicators.carousel.slide(data-ride='carousel')
@@ -15,17 +15,17 @@ block content
                     li(data-target='#carouselExampleIndicators', data-slide-to='6')
                 .carousel-inner
                     .carousel-item.active
-                        img.d-block.w-100(src='../img/home/McArthur.jpeg', alt='McArthur Outlet', width='300',height='500' )
+                        img.d-block.w-100(src='../img/home/w-1.jpg', alt='McArthur Outlet', width='300',height='700' )
                     .carousel-item
-                        img.d-block.w-100(src='../img/home/metrotown.jpg', alt='Metrotown Mall', width='300',height='500')
+                        img.d-block.w-100(src='../img/home/w-3.jpg', alt='Metrotown Mall', width='300',height='700')
                     .carousel-item
-                        img.d-block.w-100(src='../img/home/Pacificcenter.jpg', alt='Pacific Center',width='300',height='500')
+                        img.d-block.w-100(src='../img/home/w-4.jpg', alt='Pacific Center',width='300',height='700')
                     .carousel-item
-                        img.d-block.w-100(src='../img/home/parkroyal.jpg', alt='Park Royal',width='300',height='500')
+                        img.d-block.w-100(src='../img/home/w-5.jpg', alt='Park Royal',width='300',height='700')
                     .carousel-item
-                        img.d-block.w-100(src='../img/home/richmondcenter.jpeg', alt='Richmond Center',width='300',height='500')
+                        img.d-block.w-100(src='../img/home/w-13.jpg', alt='Richmond Center',width='300',height='700')
                     .carousel-item
-                        img.d-block.w-100(src='../img/home/robson.jpg', alt='Robson St.',width='300',height='500')
+                        img.d-block.w-100(src='../img/home/w-7.jpg', alt='Robson St.',width='300',height='700')
                 a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
                     span.carousel-control-prev-icon(aria-hidden='true')
                     span.sr-only Previous
@@ -45,79 +45,133 @@ block content
                     span.carousel-control-next-icon(aria-hidden='true')
                     span.sr-only Next
         style(type='text/css').
+            body{
+                margin:20 20 20 20;
+            }
+            #carouselExampleIndicators.carousel.slide{
+                margin-top:50
+            }
+            .covid-19{
+                margin-top:50
+            }
+            .notice{
+                text-align:center;
+                margin-top:80;
+                font-family: 'Dancing Script', cursive;
+                font-size:50px;
+            }
             footer{
                 font-family: 'Baloo Bhai 2', cursive;
                 font-size:20px;
+                margin-top:100;
                 padding:5px;
                 text-align:center;
+                background:#ede9ce;
             }
-            .card-group{
-                background:white;
-                
+            .info{
+                text-align:left;
             }
-            .card img {
-                width: 100%;
-                height: auto;
-                vertical-align: middle;
+            .info img{
+                width:20;
+                height:20;
             }
-            .one{
-                background:#edd9c0;
-                padding:50px;
+            .main img{
+                margin-top:50;
+                margin-left:20;
+                margin-right:auto;
+                position:center;
             }
-            .two{
-                background:#c9d8c5;
-                padding:50px;
-                text-align:right;    
-
+            .space{
+                margin-top:20;
+                margin-left:40;
             }
-            .three{
-                background:#a8b6bf;
-                padding:50px;
-
+            .alert.alert-danger{
+                width:1550;
+                text-align:center;
             }
-            .four{
-                background:#b0aac2;
-                padding:50px;
-                text-align:right;    
+            .method{
+                text-align:left;
+            }
+            .method_1{
+                margin-left:0
+            }
+            .store{
+                text-align:left;
+            }
+            .space_1{
+                background:#dbc3d0;
+                margin-top:50;
+                margin-left:20
+            }
+            .card-body img{
+                height:350
+            }
+            .card{
+                margin-top:40;
             }
         .col-4
-            .one Feel-good shopping.
-            .two Anything but ordinary.
-            .three Always in style!
-            .four Shopping for all seasons.       
-    .row.row-cols-1.row-cols-md-3
-            .col-sm-4
-                .card
-                    img.card-img-top(src='../img/home/h-1.jpeg' alt='...')
+            .covid-19
+                img(src='../img/home/w-16.jpg' width='500' height='700')
+
+        .space
+            .alert.alert-danger(role='alert')
+                | COVID-19:STAY SAFE AND KEEP SOCIAL DISTANCE&mdash;
+    .row
+        .col-1
+            .space_1       
+        .col-11   
+            .main
+                img(src='../img/home/w-6.jpg' width='450' height='700')
+                img(src='../img/home/w-11.jpg' width='450' height='700')
+                img(src='../img/home/w-12.jpg' width='450' height='700')
+    .notice
+        p.
+            We make every girls dream come true
+        p.
+            Choose your dream wedding dress
+    .row
+        each product in products
+            .col-auto-mb-3
+                .card(style='width: 20rem;height:30rem;')
                     .card-body
-                    a.nav-link(href='/newArrival') New Arrival 
-            .col-sm-4    
-                .card
-                    img.card-img-top(src='../img/home/h-4.png' alt='...')
-                    .card-body
-                    a.nav-link(href='/women') Top
-            .col-sm-4    
-                .card
-                    img.card-img-top(href="" src='../img/home/h-3.png' alt='...')
-                    .card-body
-                    a.nav-link(href='/men') Dress 
-    .row.row-cols-1.row-cols-md-3    
-            .col-sm-4
-                .card
-                    img.card-img-top(src='../img/home/h-2.jpg' alt='...')
-                    .card-body
-                    a.nav-link(href='/kid') Accessories
-            .col-sm-4    
-                .card
-                    img.card-img-top(src='../img/home/h-7.jpg' alt='...')
-                    .card-body
-                    a.nav-link(href='/pants') Pants
-            .col-sm-4    
-                .card
-                    img.card-img-top(src='../img/home/h-6.jpg' alt='...')
-                    .card-body
-                    a.nav-link(href='/onsale') On Sale
+                        img(src="/img/upload/" + product.image alt=product.name, width='250')
+                        a(href='/newArrival')
+                            h5.card-title=product.name 
     footer
-            p.
-                Enjoy Your Shopping
+        .row 
+            .col-3
+                .method 
+                    h6  PAYMENT METHOD
+                    p
+                        | we accept:
+                        img(src='../img/home/logo-3.png' width='100' height='30' alt='pay method' align='middle')
+            .col-3
+                .info
+                    h6 INFORMATION
+                    p.
+                        Business hour:Monday-Friday
+                    p.
+                        Contact(24/7):604-666-9999</br>
+                    p
+                        img(src='../img/home/line.png' alt='Smiley face' align='middle')
+                        |  angelleu
+                    p
+                    a(href='mailto:ANGEL840816@gmail.com') 
+                        img(src='../img/home/email.jpg' alt='Smiley face' align='middle')
+                        | ANGEL840816@gmail.com
+                    p
+                    a(href='https://www.instagram.com/')
+                        img(src='../img/home/ig.png' alt='Smiley face' align='middle')
+                        | angel_leu
+            .col-3
+                .store
+                    h6 LOCATION
+                    p.
+                        314-1024 Leslie Rd. V9M 8W5.</br> 
+                        Vancouver. B.C.</br> 
+                        Canada
+            .row   
+                p.
+                    @copyright to Angel Leu
+        
 

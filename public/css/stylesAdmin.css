@@ -6,14 +6,19 @@ body{
     font-weight:bold;
     text-align:center;
     font-size:30px;    
-    color:black;
-    background:yellow;
-    margin-left:50px;
-    margin-right:50px;
+    color:white;
+    background:#c7ad88;
+    margin-left:auto;
+    margin-right:auto;
+}
+h3{
+    text-align:right;
+    font-size:20px;
+    margin-bottom:50px;
 }
 .create h2{
     font-weight:bold;
-    text-align:center;
+    text-align:right;
     font-size:30px;    
     color:black;
     padding:50px 50px 50px 50px;
@@ -24,7 +29,18 @@ form{
     background:#FFDEE5;
     text-align:left;
     font-size:16px;
-    margin: auto;
+    margin-left: 800;
     padding:50px 50px 50px 50px;
 }
+.card-body{
+    margin:auto;
+}
+.card-body img{
+    display:block;
+    max-width:18rem;
+    max-height:23rem;
+    width:auto;
+    height:auto;
+}
+
 

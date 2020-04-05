@@ -4,14 +4,17 @@ html
         link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
         link(rel="stylesheet",href="/css/stylesAdmin.css")
     body
-    h1 Let's shop in Vancouver
+    .container
+    .row
+        .col
+        h1 Your Dream Wedding Dress
+    .row
+        .col
         ul.nav.justify-content-end
             li.nav-item
                 a.nav-link(href='/') Home
             li.nav-item
-                a.nav-link(href='/admin') Admin 
-            //li.nav-item
-                a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
+                a.nav-link(href='/admin') Admin
 block content
     
 script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js', integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n', crossorigin='anonymous')

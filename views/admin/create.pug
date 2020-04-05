@@ -2,10 +2,11 @@ extends ./templateAdmin.pug
 
 block content
     .create
-        h2 This is a form that you can create a new products
+        
+        h2 This is a form that you can create a new Wedding Dress
         form(action="/admin/create" method="post" enctype="multipart/form-data") 
                 .form-group
-                    label(for='productName') Product Name:
+                    label(for='productName') Wedding Dress:
                     input#exampleInputEmail1.form-control(type='text' placeholder="Product Name" name="name")
                 .form-group
                     label(for='description') Description:
@@ -17,10 +18,12 @@ block content
                     label(for='file') Image:
                     input#exampleFormControlFile1.form-control-file(type='file' name="image")
                 button.btn.btn-outline-info Create
+                a.btn.btn-outline-dark(href='/admin') Back  
         style(type='text/css').
                 body{
-                    background-image:url(../img/background/bloom.jpg);
+                    background-image:url(../img/background/choose.jpg);
                     background-repeat:no-repeat;
                     background-position:left bottom;
-                    background-size:400px;
+                    background-size:800px;
                 }
+                

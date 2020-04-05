@@ -1,5 +1,7 @@
-const home=(req,res)=>{
-    //res.send(`welcome to final project home page`);
-    res.render('home')
+const Product = require('../model/product');
+const home=async(req,res)=>{
+    const products = await Product.find().exec();
+     
+    res.render('home',{products})
 }
 module.exports=home;

@@ -2,17 +2,31 @@ extends ./templateAdmin.pug
 
 block content
     .admin
-        h2 Admin page 
-        a.btn.btn-outline-dark(href='/admin/create') Create
+        h2 Admin page
+    .row
+        .col
+            h3 Welcome to the admin page. You can create a new wedding dress here.
+        .col 
+            a.btn.btn-outline-info(href='/admin/create')  Create
     .row
         each product in products
-            .col-sm-3
-                .card(style='width: 20rem;height:35rem;')
+            .col-auto-mb-3
+                .card(style='width: 20rem;height:40rem;')
                     .card-body
                         img(src="/img/upload/" + product.image alt=product.name, width='250')
                         h5.card-title=product.name 
-                        h6.card-subtitle.mb-2.text-muted Card subtitle
                         p.card-text=product.description
                         p.card-text Price: $ #{ product.price}
                         a.btn.btn-outline-success(href='/admin/update/'+product.id) Update
                         a.btn.btn-outline-danger(href='/admin/delete/'+product.id) Delete
+        style(type='text/css').
+            h3{
+                margin-top:50;
+            }
+            a{
+                margin-top:50;
+            }
+            .card-body img{
+                height:350
+            }
+            
