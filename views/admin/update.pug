@@ -1,8 +1,7 @@
 extends ./templateAdmin.pug
 
 block content
-        h2 This is a form that you can create a new products
-         
+        h2 This is a form that you can update an existing wedding dress
         form(action="/admin/update/" +product.id method="post" enctype="multipart/form-data")
             .form-group
                 label(for='productName') Product Name:
@@ -18,3 +17,13 @@ block content
                 input#exampleFormControlFile1.form-control-file(type='file' name="image")
             button.btn.btn-outline-info Update
             a.btn.btn-outline-dark(href='/admin') Back
+        style(type='text/css').
+                    body{
+                        background-image:url(../../img/background/b-1.png);
+                        background-repeat:no-repeat;
+                        background-position:left;
+                        background-size:800px;
+                    }
+                    h2{
+                        text-align:right;
+                    }
