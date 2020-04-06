@@ -1,28 +1,56 @@
 extends ./templateAdmin.pug
 
 block content
-    .create
-        h2 This is a form that you can create a new Wedding Dress
-        form(action="/admin/create" method="post" enctype="multipart/form-data") 
-                .form-group
-                    label(for='productName') Wedding Dress:
-                    input#exampleInputEmail1.form-control(type='text' placeholder="Product Name" name="name")
-                .form-group
-                    label(for='description') Description:
-                    input#exampleInputDescription.form-control(type='text' placeholder="Description" name="description")
-                .form-group
-                    label(for='price') Price:
-                    input#exampleInputPrice.form-control(type='text' placeholder="Price" name="price") 
-                .form-group
-                    label(for='file') Image:
-                    input#exampleFormControlFile1.form-control-file(type='file' name="image")
-                button.btn.btn-outline-info Create
-                a.btn.btn-outline-dark(href='/admin') Back  
+        form.needs-validation(action="/admin/create" method="post" enctype="multipart/form-data" novalidate)
+            h2 This is a form that you can create a new Wedding Dress 
+            .form-group
+                label(for='productName') Wedding Dress:
+                input#exampleInputEmail1.form-control(type='text' placeholder="Product Name" name="name" required)
+                .invalid-feedback
+                    | Please input a wedding dress name.
+            .form-group
+                label(for='description') Description:
+                input#exampleInputDescription.form-control(type='text' placeholder="Description" name="description" required)
+                .invalid-feedback
+                    | Please input some description.
+            .form-group
+                label(for='price') Price:
+                input#exampleInputPrice.form-control(type='text' placeholder="Price" name="price" required)
+                .invalid-feedback
+                    | Please input price. 
+            .form-group
+                label(for='file') Image:
+                //input#.custom-file-input(type='file' name="image" required)
+                input#validatedCustomFile.form-control-file(type='file' name="image" required)
+                .invalid-feedback
+                    | Please select a new photo. 
+            button.btn.btn-outline-info Create
+            a.btn.btn-outline-dark(href='/admin') Back  
         style(type='text/css').
                 body{
                     background-image:url(../../img/background/choose.jpg);
                     background-repeat:no-repeat;
                     background-position:left bottom;
-                    background-size:800px;
+                    background-size:650px;
                 }
-                
+                h2{
+                    font-size:20px;
+                    font-weight:bold;
+                    text-align:center;
+                }
+        script.
+            (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+            }, false);
+            });
+            }, false);
+            })();
