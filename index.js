@@ -43,4 +43,5 @@ app.get('/admin/update/:id', adminUpdate)
 app.post('/admin/update/:id',upload.single('image'), adminUpdatePost)
 
 
+
 app.listen(port,()=>console.log(`Shopping site running on port ${port}`));

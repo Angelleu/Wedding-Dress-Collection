@@ -45,9 +45,6 @@ block content
                     span.carousel-control-next-icon(aria-hidden='true')
                     span.sr-only Next
         style(type='text/css').
-            body{
-                margin:0;
-            }
             #carouselExampleIndicators.carousel.slide{
                 margin-top:50
             }
@@ -59,6 +56,7 @@ block content
                 margin-top:80;
                 font-family: 'Dancing Script', cursive;
                 font-size:50px;
+                color:brown;
             }
             footer{
                 font-family: 'Baloo Bhai 2', cursive;
@@ -82,8 +80,10 @@ block content
                 position:center;
             }
             .space{
-                margin-top:20;
-                margin-left:40;
+                margin-top:30;
+                text-align:center;
+                color:brown;
+                font-size:40px;
             }
             .alert.alert-danger{
                 width:1000;
@@ -108,14 +108,16 @@ block content
             }
             .card{
                 margin-top:40;
+                
             }
         .col-4
             .covid-19
-                img.img-fluid(src='../img/home/w-16.jpg' width='500' height='500')
+                img(src='../img/home/w-16.jpg' width='500' height='700')
 
-        .space
-            .alert.alert-danger(role='alert')
-                | COVID-19:STAY SAFE AND KEEP SOCIAL DISTANCE&mdash;
+    .space
+        p.
+            Wedding is the most beautiful dream for every girls </br>
+            Here is the collection for all wedding dresses
     .row
         .col-1       
         .col-11   
@@ -127,7 +129,7 @@ block content
         p.
             We make every girls dream come true
         p.
-            Choose your dream wedding dress
+            View your dream wedding dress
     .row
         each product in products
             .col-auto-mb-3
